@@ -1,3 +1,181 @@
+Basic math module
+'''
+
+import math               # importing math function to perform these below
+
+print(math.factorial(6))  # factorial (6*5*4*3*2*1)
+print(math.ceil(4.4))     # rounds to to most value
+print(math.floor(4.4))    # rounds to bottom most value
+print(math.log(10))       # finds logarithmic value
+print(math.pi)            # prints pi()  value
+
+'''
+
+Exercise
+
+'''
+
+import math
+
+r = float(input("Enter radius here: "))
+
+Area = (math.pi * (r ** 2))
+circumference = 2 * math.pi * r
+
+print(round(Area, 2), "\n", round(circumference, 2))
+
+
+'''
+
+Lists
+
+'''
+'''
+
+stud = ['john', 'mary', 'lil', 'pump']  # in lists we can change strings or values they are mutable
+print(stud)
+stud[0] = "gogo" # or we can use append (stud.append("james"))
+print(type(stud))
+print(len(stud))
+print(stud[0])
+print(stud)
+
+#add a value in our desired position using name.insert(<position>,<"string">)
+'''
+'''
+
+stud = ["john", "mary", "lil", "pump"]  # in lists we can change strings or values they are mutable
+stud1 = ["buny","pine","cykish"]
+stud.insert(0, "gogo")  #inserting a string
+stud.pop(0)             #pops out the value with number as position
+stud.remove("lil")      #removes a particlar string
+print(stud + stud1)
+print(stud)
+
+'''
+'''
+
+Tuples
+
+
+'''
+'''
+
+stud = ["john", "mary", "lil", "pump"]  # in tuples we cannot change strings or values they are immutable
+print(stud[0])
+
+'''
+
+Exercise for Tuple: 1
+
+'''
+
+months = ("jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec")
+
+birth = input("enter your birtday in 'DD-MM-YY' format: ")
+
+index = int(birth[3:5]) -1
+bd_month = months[index]
+print("your birthday month is: ", bd_month)
+
+'''
+Exercise for list 2
+
+'''
+
+names = ["john", "piper"]
+
+add_name = input("enter your name: ")
+
+names.append(add_name)
+
+print(names)
+
+'''
+'''
+
+Dictionaries
+
+'''
+'''
+
+details =  {"name" : "john", "year" : "2002", "birth" : "india"}
+
+details["name"] = "james"
+details["children"] = ["ash", "mitsy"]
+details["children"].append("ana")
+details["status"] = "alive"
+details.get("age")
+n = details.get("name", "invalid")   # to get the details from the dict using string
+details.clear()  # to clear the dictionary
+print(n)
+print(details)
+
+print(details)
+print(type(details))
+
+'''
+'''
+Exercise
+
+'''
+'''
+
+person = {"name": "junaid", "age": 22, "gender": "male"}
+
+key = input("what you want to know:").lower()
+
+result = person.get(key, "invalid")
+
+print(result)
+
+'''
+'''
+
+Using If we wrote Boolean prog
+
+'''
+'''
+
+num1 = float(input("enter first: "))
+num2 = float(input("enter second: "))
+
+if (num1 > num2):
+    print(num1, "is greater than", num2)
+elif (num1==num2):
+    print(num1, "is equal to", num2)
+elif (num1 < num2):
+    print(num1, "is less than", num2)
+
+'''
+'''
+
+While Loops
+
+'''
+'''
+
+num = 6
+guess = int(input("enter the number: "))
+
+while True:
+    if guess == num:
+        print("you guessed it right")
+        break
+    else:
+        guess = int(input("try again: "))
+
+print(guess)
+
+'''
+'''
+
+Guessing number using random module
+
+'''
+'''
+
+
 import random
 
 num = random.randint(0, 10)
@@ -11,3 +189,14 @@ while True:
         guess = int(input("try again: "))
 
 print(guess)
+
+
+'''
+'''
+
+
+
+
+
+
+
